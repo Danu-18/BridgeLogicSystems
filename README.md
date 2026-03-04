@@ -1,4 +1,4 @@
-# Shadab Agency - Digital Solutions
+# BridgeLogic Systems - Digital Solutions
 
 A modern, responsive digital agency website built with Next.js and React. This project showcases a professional landing page with smooth animations, modern UI components, and optimized performance for static hosting.
 

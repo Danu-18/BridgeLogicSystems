@@ -9,17 +9,18 @@ export const NAVIGATION_LINKS = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Portfolio', href: '/#portfolio' },
   { name: 'Testimonials', href: '/testimonials' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];
 
 export const SERVICES = [
-  { Icon: 'Zap', color: '#7c3aed', bg: 'rgba(124,58,237,0.15)', title: 'Product Design', desc: 'We craft intuitive and visually stunning product designs that captivate users and drive engagement.', hl: false },
-  { Icon: 'Globe', color: '#f5c518', bg: 'rgba(245,197,24,0.15)', title: 'Web Development', desc: 'Building robust, scalable web applications with cutting-edge technologies and best practices.', hl: false },
-  { Icon: 'TrendingUp', color: '#14b8a6', bg: 'rgba(20,184,166,0.15)', title: 'Business Development', desc: 'Strategic growth solutions that help your business expand its reach and maximize revenue.', hl: false },
-  { Icon: 'Users', color: '#fff', bg: 'rgba(255,255,255,0.15)', title: 'Human Resources', desc: 'Comprehensive HR solutions to attract, retain, and develop top talent for your organization.', hl: true },
+  { Icon: 'Zap', color: '#7c3aed', bg: 'rgba(124,58,237,0.15)', title: 'CRM & SaaS', desc: 'Custom CRM solutions and Software-as-a-Service platforms to streamline your business operations and enhance customer relationships.', hl: false },
+  { Icon: 'Globe', color: '#f5c518', bg: 'rgba(245,197,24,0.15)', title: 'Web Design & Development', desc: 'Building robust, scalable web applications with cutting-edge technologies and modern design principles.', hl: false },
+  { Icon: 'Smartphone', color: '#14b8a6', bg: 'rgba(20,184,166,0.15)', title: 'App Design', desc: 'Creating intuitive and engaging mobile applications for iOS and Android that deliver exceptional user experiences.', hl: false },
+  { Icon: 'Palette', color: '#e91e8c', bg: 'rgba(233,30,140,0.15)', title: 'Branding', desc: 'Developing compelling brand identities that resonate with your target audience and set you apart from the competition.', hl: false },
+  { Icon: 'Search', color: '#22c55e', bg: 'rgba(34,197,94,0.15)', title: 'SEO Services', desc: 'Optimizing your online presence to rank higher in search results and drive organic traffic to your website.', hl: false },
+  { Icon: 'TrendingUp', color: '#f59e0b', bg: 'rgba(245,158,11,0.15)', title: 'Digital Marketing', desc: 'Comprehensive digital marketing strategies to increase brand awareness, engagement, and conversions across all channels.', hl: true },
 ];
 
 export const PORTFOLIO_PROJECTS = [
@@ -38,8 +39,9 @@ export const STATS_DATA = [
 ];
 
 export const TESTIMONIALS = [
-  { text: "Working with Shadab Agency has been an absolute game-changer for our business. Their team delivered a stunning website that perfectly captures our brand identity and has significantly increased our conversion rates.", author: 'Kavita Lynch', role: 'CEO, TechStart Inc.', img: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&q=80' },
-  { text: "The team at Shadab Agency exceeded all our expectations. Their attention to detail, creative approach, and technical expertise made our project a huge success. Highly recommended!", author: 'Marcus Johnson', role: 'Founder, Digital Ventures', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80' },
+  { text: "Working with BridgeLogic Systems has been an absolute game-changer for our business. Their team delivered a stunning website that perfectly captures our brand identity and has significantly increased our conversion rates.", author: 'John Lynch', role: 'CEO, TechStart Inc.', img: '/t1.jpg' },
+  { text: "The team at BridgeLogic Systems exceeded all our expectations. Their attention to detail, creative approach, and technical expertise made our project a huge success. Highly recommended!", author: 'Marcus Johnson', role: 'Founder, Digital Ventures', img: '/t2.jpg' },
+  { text: "BridgeLogic Systems transformed our digital presence completely. Their innovative solutions and professional approach helped us reach new markets and grow our customer base exponentially.", author: 'Dave Chen', role: 'Marketing Director, GrowthCo', img: '/t3.jpg' },
 ];
 
 export const BLOG_POSTS = [
@@ -50,13 +52,13 @@ export const BLOG_POSTS = [
 
 export const FOOTER_LINKS = [
   { title: 'Quick Links', items: ['Home', 'About Us', 'Services', 'Portfolio', 'Blog', 'Contact'] },
-  { title: 'Product', items: ['Web Design', 'App Design', 'UI/UX Design', 'Branding', 'SEO Services', 'Digital Marketing'] },
+  { title: 'Services', items: ['CRM -- Saas', 'Web Design & Development', 'App Design', 'Branding', 'SEO Services', 'Digital Marketing'] },
 ];
 
 export const CONTACT_INFO = [
-  { Icon: 'MapPin', text: '123 adress of this agency' },
-  { Icon: 'Phone', text: '+92 3452520619' },
-  { Icon: 'Mail', text: 'hello@Shadab.agency' },
+  { Icon: 'MapPin', text: '20309 Martin Ln Pflugerville, TX 78660' },
+  { Icon: 'Phone', text: '281-721-9469' },
+  { Icon: 'Mail', text: 'info@bridgelogicsystems.com' },
 ];
 
 export const FOOTER_BOTTOM_LINKS = ['Privacy Policy', 'Terms of Service'];

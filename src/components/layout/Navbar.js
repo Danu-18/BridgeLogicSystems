@@ -34,7 +34,7 @@ export const Navbar = () => {
               <Zap size={16} color="#fff" />
             </div>
             <span style={{ color: '#fff', fontWeight: 800, fontSize: 'clamp(16px, 4vw, 18px)', letterSpacing: '-0.02em' }}>
-              <span style={{ color: '#e91e8c' }}>Shadab</span> Agency
+              <span style={{ color: '#e91e8c' }}>BridgeLogic</span> Systems
             </span>
           </motion.div>
 
@@ -75,7 +75,7 @@ export const Navbar = () => {
               transition={{ type: 'spring', damping: 30, stiffness: 300 }}
               style={{ position: 'fixed', top: 0, right: 0, bottom: 0, zIndex: 101, width: 280, background: '#111', borderLeft: '1px solid #222', display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 24px', borderBottom: '1px solid #222' }}>
-                <span style={{ color: '#fff', fontWeight: 800, fontSize: 18 }}><span style={{ color: '#e91e8c' }}>Shadab</span></span>
+                <span style={{ color: '#fff', fontWeight: 800, fontSize: 18 }}><span style={{ color: '#e91e8c' }}>BridgeLogic</span></span>
                 <button onClick={() => setMenuOpen(false)} style={{ background: 'none', border: 'none', color: '#9ca3af', cursor: 'pointer' }}><X size={20} /></button>
               </div>
               <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: 2 }}>

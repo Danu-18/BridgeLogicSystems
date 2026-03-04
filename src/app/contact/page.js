@@ -98,7 +98,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 style={{ color: '#fff', fontWeight: 600, fontSize: 16, margin: '0 0 4px 0' }}>Email</h3>
-                    <p style={{ color: '#6b7280', fontSize: 14, margin: 0 }}>hello@shadab.agency</p>
+                    <p style={{ color: '#6b7280', fontSize: 14, margin: 0 }}>info@bridgelogicsystems.com</p>
                   </div>
                 </motion.div>
 
@@ -108,7 +108,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 style={{ color: '#fff', fontWeight: 600, fontSize: 16, margin: '0 0 4px 0' }}>Phone</h3>
-                    <p style={{ color: '#6b7280', fontSize: 14, margin: 0 }}>+92 3452520619</p>
+                    <p style={{ color: '#6b7280', fontSize: 14, margin: 0 }}>281-721-9469</p>
                   </div>
                 </motion.div>
 
@@ -118,7 +118,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 style={{ color: '#fff', fontWeight: 600, fontSize: 16, margin: '0 0 4px 0' }}>Address</h3>
-                    <p style={{ color: '#6b7280', fontSize: 14, margin: 0 }}>123 adress of this agency</p>
+                    <p style={{ color: '#6b7280', fontSize: 14, margin: 0 }}>20309 Martin Ln Pflugerville, TX 78660</p>
                   </div>
                 </motion.div>
               </div>

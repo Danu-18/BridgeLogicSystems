@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Shadab Agency - Digital Solutions",
+  title: "BridgeLogic Systems - Digital Solutions",
   description: "Creative digital agency specializing in design, development, and digital marketing solutions",
 };
 

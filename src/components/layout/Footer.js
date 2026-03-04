@@ -12,7 +12,7 @@ export const Footer = () => {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
               <div style={{ width: 32, height: 32, borderRadius: 8, background: 'linear-gradient(135deg,#7c3aed,#e91e8c)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 12px rgba(233,30,140,0.3)' }}><Zap size={16} color="#fff" /></div>
-              <span style={{ color: '#fff', fontWeight: 800, fontSize: 18 }}><span style={{ color: '#e91e8c' }}>Shadab</span> Agency</span>
+              <span style={{ color: '#fff', fontWeight: 800, fontSize: 18 }}><span style={{ color: '#e91e8c' }}>BridgeLogic</span> Systems</span>
             </div>
             <p style={{ color: '#4b5563', fontSize: 13, lineHeight: 1.75, marginBottom: 24 }}>We are a creative digital agency specializing in design, development, and digital marketing solutions.</p>
             <div style={{ display: 'flex', gap: 10 }}>
@@ -58,7 +58,7 @@ export const Footer = () => {
       </div>
       <div style={{ borderTop: '1px solid #1a1a1a' }}>
         <div className="section-inner" style={{ paddingTop: 18, paddingBottom: 18, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10 }}>
-          <p style={{ color: '#374151', fontSize: 13, margin: 0 }}>© 2026 Shadab Agency. All rights reserved.</p>
+          <p style={{ color: '#374151', fontSize: 13, margin: 0 }}>© 2026 BridgeLogic Systems. All rights reserved.</p>
           <div style={{ display: 'flex', gap: 20 }}>
             {FOOTER_BOTTOM_LINKS.map(t => (
               <a key={t} href="#" style={{ color: '#374151', fontSize: 13, textDecoration: 'none', transition: 'color 0.2s' }}

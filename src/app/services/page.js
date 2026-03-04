@@ -68,7 +68,15 @@ export default function ServicesPage() {
 
           <div className="four-col-grid">
             {SERVICES.map((svc, i) => {
-              const iconMap = { Zap: 'Zap', Globe: 'Globe', TrendingUp: 'TrendingUp', Users: 'Users' };
+              const iconMap = { 
+                Zap: 'Zap', 
+                Globe: 'Globe', 
+                TrendingUp: 'TrendingUp', 
+                Users: 'Users',
+                Smartphone: 'Smartphone',
+                Palette: 'Palette',
+                Search: 'Search'
+              };
               const IconName = iconMap[svc.Icon];
               const Icon = require('lucide-react')[IconName];
               
