@@ -25,7 +25,7 @@ import {
 // Team data
 const teamMembers = [
   {
-    name: "Sarah Johnson",
+    name: "Dave Johnson",
     role: "CEO & Founder",
     description: "Visionary leader with 10+ years in digital innovation and business strategy.",
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b920?w=300&q=80",
@@ -73,10 +73,7 @@ export default function AboutPage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
             style={{ textAlign: 'center', maxWidth: 800, margin: '0 auto' }}>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '5px 14px', borderRadius: 999, fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', marginBottom: 28, background: 'rgba(34,197,94,0.12)', color: '#22c55e', border: '1px solid rgba(34,197,94,0.3)' }}>
-                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#22c55e', boxShadow: '0 0 6px #22c55e', animation: 'pulse 2s infinite' }} />
-                ABOUT US
-              </span>
+              <Badge>ABOUT US</Badge>
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }}

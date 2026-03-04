@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { Zap, Globe, TrendingUp, Users } from 'lucide-react';
+import { Zap, Globe, TrendingUp, Users, Smartphone, Palette, Search } from 'lucide-react';
 import { Badge } from '../../ui/Badge';
 import { SERVICES } from '../../../constants';
 
 export const ServicesSection = () => {
-  const iconMap = { Zap, Globe, TrendingUp, Users };
+  const iconMap = { Zap, Globe, TrendingUp, Users, Smartphone, Palette, Search };
 
   return (
     <section className="section-pad" style={{ background: '#0d0d0d' }}>
