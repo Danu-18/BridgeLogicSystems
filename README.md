@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shadab Agency - Digital Solutions
 
-## Getting Started
+A modern, responsive digital agency website built with Next.js and React. This project showcases a professional landing page with smooth animations, modern UI components, and optimized performance for static hosting.
 
-First, run the development server:
+## 🚀 Tech Stack
 
+- **Framework**: Next.js 16.1.6
+- **Language**: JavaScript/React
+- **Styling**: Tailwind CSS 4.0
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Static export for Apache hosting
+
+## ✨ Features
+
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Smooth Animations**: Engaging micro-interactions and page transitions
+- **Modern UI**: Clean, professional design with gradient effects
+- **Optimized Performance**: Static site generation for fast loading
+- **SEO Friendly**: Built with semantic HTML and proper meta tags
+- **Apache Ready**: Configured for traditional shared hosting
+
+## 🛠️ Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd shadab-web
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+## 🏃‍♂️ Development
+
+Start the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Static Build & Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured for static export and deployment on Apache servers (like Namecheap shared hosting).
 
-## Learn More
+### Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+1. Build the static files:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. The static files will be generated in the `out/` directory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Deploy to Apache Hosting
 
-## Deploy on Vercel
+1. Upload the contents of the `out/` directory to your web server's public folder (usually `public_html/` or `www/`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. The `.htaccess` file is automatically included and will handle:
+   - Client-side routing
+   - URL rewriting for Next.js routes
+   - Proper MIME types
+   - Asset compression
+   - Security headers
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Your site should be accessible at your domain!
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build static export for production
+- `npm run start` - Start production server (for testing)
+- `npm run lint` - Run ESLint
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── page.js            # Home page
+│   ├── about/page.js      # About page
+│   ├── contact/page.js    # Contact page
+│   ├── services/page.js   # Services page
+│   ├── blog/page.js       # Blog page
+│   └── testimonials/page.js # Testimonials page
+├── components/            # Reusable React components
+│   ├── layout/           # Layout components (Navbar, Footer)
+│   ├── features/landing/ # Landing page sections
+│   └── ui/               # UI components
+├── styles/               # Global styles and responsive utilities
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility functions
+└── constants/           # Application constants
+```
+
+## 🎨 Design System
+
+The project uses a modern design system with:
+- **Color Scheme**: Dark theme with purple and pink accents
+- **Typography**: Inter font family for modern readability
+- **Spacing**: Consistent spacing using Tailwind CSS utilities
+- **Animations**: Subtle micro-interactions using Framer Motion
+
+## 🔧 Configuration
+
+### Next.js Configuration
+
+The `next.config.js` is optimized for static export:
+- `output: 'export'` - Generates static HTML files
+- `images: { unoptimized: true }` - Disables image optimization for static hosting
+- `reactCompiler: true` - Enables React compiler optimization
+
+### Apache Configuration
+
+The `.htaccess` file in the `public/` directory handles:
+- URL rewriting for client-side routing
+- Asset compression and caching
+- Security headers
+- MIME type configuration
+
+## 🌐 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 📄 License
+
+This project is private and proprietary.
+
+## 🤝 Support
+
+For support or questions about this project, please contact the development team.
+
+---
+
+**Built with ❤️ using Next.js and modern web technologies**
