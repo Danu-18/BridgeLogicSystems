@@ -2,15 +2,35 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Zap } from 'lucide-react';
 import { NAVIGATION_LINKS } from '../../constants';
+import { UserMenu } from '../auth';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', fn);
-    return () => window.removeEventListener('scroll', fn);
+    
+    // Check for logged in user
+    const currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
+      setUser(JSON.parse(currentUser));
+    }
+    
+    // Listen for storage changes (for login/logout)
+    const handleStorageChange = () => {
+      const updatedUser = localStorage.getItem('currentUser');
+      setUser(updatedUser ? JSON.parse(updatedUser) : null);
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    
+    return () => {
+      window.removeEventListener('scroll', fn);
+      window.removeEventListener('storage', handleStorageChange);
+    };
   }, []);
 
   return (
@@ -49,14 +69,20 @@ export const Navbar = () => {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }} className="nav-desktop">
-            <motion.button whileHover={{ scale: 1.03, borderColor: '#fff' }} whileTap={{ scale: 0.97 }}
-              style={{ padding: '6px 16px', fontSize: 12, fontWeight: 600, color: '#fff', border: '1px solid rgba(255,255,255,0.25)', borderRadius: 999, background: 'transparent', cursor: 'pointer', transition: 'border-color 0.2s' }}>
-              Login
-            </motion.button>
-            <motion.button whileHover={{ scale: 1.05, boxShadow: '0 0 24px rgba(233,30,140,0.6)' }} whileTap={{ scale: 0.97 }}
-              style={{ padding: '6px 16px', fontSize: 12, fontWeight: 700, color: '#fff', border: 'none', borderRadius: 999, background: 'linear-gradient(135deg,#e91e8c,#7c3aed)', cursor: 'pointer' }}>
-              Sign Up
-            </motion.button>
+            {user ? (
+              <UserMenu />
+            ) : (
+              <>
+                <motion.a href="/auth" whileHover={{ scale: 1.03, borderColor: '#fff' }} whileTap={{ scale: 0.97 }}
+                  style={{ padding: '6px 16px', fontSize: 12, fontWeight: 600, color: '#fff', border: '1px solid rgba(255,255,255,0.25)', borderRadius: 999, background: 'transparent', cursor: 'pointer', transition: 'border-color 0.2s', textDecoration: 'none', display: 'inline-block' }}>
+                  Login
+                </motion.a>
+                <motion.a href="/auth" whileHover={{ scale: 1.05, boxShadow: '0 0 24px rgba(233,30,140,0.6)' }} whileTap={{ scale: 0.97 }}
+                  style={{ padding: '6px 16px', fontSize: 12, fontWeight: 700, color: '#fff', border: 'none', borderRadius: 999, background: 'linear-gradient(135deg,#e91e8c,#7c3aed)', cursor: 'pointer', textDecoration: 'none', display: 'inline-block' }}>
+                  Sign Up
+                </motion.a>
+              </>
+            )}
           </div>
 
           <button onClick={() => setMenuOpen(true)} className="nav-mobile" style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', padding: 8 }}>
@@ -86,8 +112,55 @@ export const Navbar = () => {
                 ))}
               </div>
               <div style={{ padding: '16px 24px', marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: 10 }}>
-                <button style={{ padding: '12px', fontSize: 14, color: '#fff', border: '1px solid #333', borderRadius: 999, background: 'transparent', cursor: 'pointer' }}>Login</button>
-                <button style={{ padding: '12px', fontSize: 14, fontWeight: 700, color: '#fff', border: 'none', borderRadius: 999, background: 'linear-gradient(135deg,#e91e8c,#7c3aed)', cursor: 'pointer' }}>Sign Up</button>
+                {user ? (
+                  <div style={{
+                    padding: '12px',
+                    background: 'rgba(233,30,140,0.1)',
+                    border: '1px solid rgba(233,30,140,0.2)',
+                    borderRadius: 8,
+                    textAlign: 'center'
+                  }}>
+                    <p style={{
+                      color: '#fff',
+                      fontSize: 13,
+                      fontWeight: 600,
+                      marginBottom: 4
+                    }}>
+                      {user.name}
+                    </p>
+                    <p style={{
+                      color: '#6b7280',
+                      fontSize: 11,
+                      marginBottom: 8
+                    }}>
+                      {user.email}
+                    </p>
+                    <button
+                      onClick={() => {
+                        localStorage.removeItem('currentUser');
+                        setUser(null);
+                        setMenuOpen(false);
+                        window.location.reload();
+                      }}
+                      style={{
+                        padding: '6px 12px',
+                        fontSize: 12,
+                        color: '#fff',
+                        border: '1px solid rgba(255,255,255,0.2)',
+                        borderRadius: 6,
+                        background: 'transparent',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      Sign Out
+                    </button>
+                  </div>
+                ) : (
+                  <>
+                    <a href="/auth" style={{ padding: '12px', fontSize: 14, color: '#fff', border: '1px solid #333', borderRadius: 999, background: 'transparent', cursor: 'pointer', textDecoration: 'none', textAlign: 'center', display: 'block' }}>Login</a>
+                    <a href="/auth" style={{ padding: '12px', fontSize: 14, fontWeight: 700, color: '#fff', border: 'none', borderRadius: 999, background: 'linear-gradient(135deg,#e91e8c,#7c3aed)', cursor: 'pointer', textDecoration: 'none', textAlign: 'center', display: 'block' }}>Sign Up</a>
+                  </>
+                )}
               </div>
             </motion.div>
           </>

@@ -121,7 +121,7 @@ export default function AboutPage() {
                 From Vision to Reality
               </h2>
               <p style={{ color: '#6b7280', lineHeight: 1.8, marginBottom: 16, fontSize: 15 }}>
-                Founded in 2019, Shadab Agency began as a small team with a big dream: to bridge the gap between innovative technology and human-centered design. Our journey started in a modest workspace with just three passionate individuals who believed that digital experiences could be more intuitive, more beautiful, and more impactful.
+                Founded in 2019, BridgeLogic Systems began as a small team with a big dream: to bridge the gap between innovative technology and human-centered design. Our journey started in a modest workspace with just three passionate individuals who believed that digital experiences could be more intuitive, more beautiful, and more impactful.
               </p>
               <p style={{ color: '#6b7280', lineHeight: 1.8, marginBottom: 16, fontSize: 15 }}>
                 Today, we've grown into a full-service digital agency serving clients worldwide, but our core values remain unchanged. We still approach every project with the same curiosity, creativity, and commitment to excellence that defined our first days.

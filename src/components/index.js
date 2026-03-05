@@ -6,3 +6,6 @@ export * from './layout';
 
 // Feature Components
 export * from './features/landing';
+
+// Auth Components
+export * from './auth';
